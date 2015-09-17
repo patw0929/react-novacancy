@@ -1,6 +1,6 @@
 {
   "name": "react-novacancy",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Rewrite novacancy.js in React.js. Text blink neon golden effect component.",
   "repository": {
     "type": "git",
