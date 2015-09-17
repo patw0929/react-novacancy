@@ -2,6 +2,13 @@
   "name": "react-novacancy",
   "version": "0.0.0",
   "description": "Rewrite novacancy.js in React.js. Text blink neon golden effect component.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patw0929/react-novacancy"
+  },
+  "bugs": {
+    "url": "https://github.com/patw0929/react-novacancy/issues"
+  },
   "main": "dist/main.js",
   "dependencies": {
     "react": "~0.13.3"
