@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>React-NoVacancy</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  <meta name="author" content="patw" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow-night-eighties.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+  <style>
+    #content {
+      background-color: #111;
+      font-family: 'Monoton', cursive;
+      text-transform: uppercase;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .title-1,
+    .title-2 {
+      display: block;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://github.com/patw0929/react-novacancy"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="page-header">
+          <h1>React-NoVacancy <small>Text neon golden effect React component.</small></h1>
+        </div>
+
+        <h2>Demo</h2>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form class="form-inline">
+              <div id="content">
+                <h1>If you can see this, something is broken (or JS is not enabled)!!.</h1>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2>Installation</h2>
+
+        <pre><code>npm install --save react-novacancy</code></pre>
+
+        <hr>
+
+        <h2>Syntax</h2>
+
+        <h3>General</h3>
+
+        <pre><code class="javascript">'use strict';
+
+var React = require('react');
+var NoVacancy = require('react-novacancy');
+
+React.render(&lt;div&gt;
+        &lt;NoVacancy text={&#39;No&#39;}
+                   className={&#39;title-1&#39;}
+                   fontSize={&#39;75px&#39;}
+                   reblinkProbability={0.1}
+                   blinkMin={0.2}
+                   blinkMax={0.6}
+                   loopMin={8}
+                   loopMax={10}
+                   lightColor={&#39;#fff&#39;}
+                   glow={[&#39;0 0 80px #ffffff&#39;, &#39;0 0 30px #008000&#39;, &#39;0 0 6px #0000ff&#39;]} /&gt;
+        &lt;NoVacancy text={&#39;Vacancy&#39;}
+                   className={&#39;title-2&#39;}
+                   fontSize={&#39;75px&#39;}
+                   blink={1} off={1}
+                   lightColor={&#39;#f00&#39;}
+                   glow={[&#39;0 0 80px Red&#39;, &#39;0 0 30px FireBrick&#39;, &#39;0 0 6px DarkRed&#39;]} /&gt;
+      &lt;/div&gt;,
+      document.getElementById('content'));
+</code></pre>
+
+        <hr>
+
+        <h2>Props</h2>
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">key</th>
+                <th scope="col">default</th>
+                <th scope="col">description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td><code>''</code></td>
+                <td>CSS class name.</td>
+              </tr>
+              <tr>
+                <th scope="row">reblinkProbability</th>
+                <td><code>(1 / 3)</code></td>
+                <td>Probability of reblink(0 to 1).</td>
+              </tr>
+              <tr>
+                <th scope="row">blinkMin</th>
+                <td><code>0.01</code></td>
+                <td>Time(sec.) of minimum blink.</td>
+              </tr>
+              <tr>
+                <th scope="row">blinkMax</th>
+                <td><code>0.5</code></td>
+                <td>Time(sec.) of maximum blink.</td>
+              </tr>
+              <tr>
+                <th scope="row">loopMin</th>
+                <td><code>0.5</code></td>
+                <td>Time(sec.) of minimum trigger blink.</td>
+              </tr>
+              <tr>
+                <th scope="row">loopMax</th>
+                <td><code>2</code></td>
+                <td>Time(sec.) of maximum trigger blink.</td>
+              </tr>
+              <tr>
+                <th scope="row">lightColor</th>
+                <td><code>'#fff'</code></td>
+                <td>Light font color. (string)</td>
+              </tr>
+              <tr>
+                <th scope="row">darkColor</th>
+                <td><code>'#ffa500'</code></td>
+                <td>Dark font color. (string)</td>
+              </tr>
+              <tr>
+                <th scope="row">glow</th>
+                <td><code>['0 0 80px Orange', '0 0 30px Red', '0 0 6px Yellow']</code></td>
+                <td>Array of text-shadow colors. (array)</td>
+              </tr>
+              <tr>
+                <th scope="row">off</th>
+                <td><code>0</code></td>
+                <td>Amount of off chars.</td>
+              </tr>
+              <tr>
+                <th scope="row">blink</th>
+                <td><code>0</code></td>
+                <td>Amount of blink chars. (0 means all chars)</td>
+              </tr>
+              <tr>
+                <th scope="row">start</th>
+                <td><code>true</code></td>
+                <td>Start to blink.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr>
+
+        <h2>Based on</h2>
+
+        <p><a href="https://github.com/chuckyglitch/novacancy.js" target="_blank">novacancy.js</a> - by <a href="http://chuckyglitch.twbbs.org/" target="_blank">@chuckyglitch</a></p>
+
+        <hr>
+
+        <h2>Lincense</h2>
+
+        <p>MIT License</p>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="col-md-12">
+        <ul class="list-inline">
+          <li><a href="https://github.com/patw0929/react-novacancy" target="_blank">GitHub</a></li>
+          <li><a href="http://patw.me" target="_blank">@patw</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react-with-addons.min.js"></script>
+  <script>
+    __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
+  </script>
+  <script type="text/javascript" src="assets/example.js"></script>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
