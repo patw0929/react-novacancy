@@ -67,7 +67,9 @@
     "neon",
     "golden",
     "text",
-    "effect"
+    "effect",
+    "react",
+    "blink"
   ],
   "author": "patw <patw.hi@gmail.com> (http://patw.me/)",
   "license": "MIT"
